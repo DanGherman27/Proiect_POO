@@ -5,6 +5,8 @@ public class Parcare
     public int IdParcare { get; set; }
     public string AdresaParcare { get; set; }
     public List<ZonaParcare> ListZoneParcare { get; set; }
+    public bool EsteStearsa { get; private set; }
+    public DateTime? DataStergere { get; private set; }
     
     public int NrZoneParcare { get; set; }
     public ReguliParcare Reguli { get; set; }
@@ -80,5 +82,16 @@ public class Parcare
 
         zona.ListLocDeParcare.Remove(loc);
         Console.WriteLine("Locul de parcare a fost sters!");
+    }
+    public void Sterge()
+    {
+        EsteStearsa = true;
+        DataStergere = DateTime.Now;
+    }
+
+    public override string ToString()
+    {
+        return $"ID: {IdParcare}, Adresa: {AdresaParcare}, " +
+               $"Status: {(EsteStearsa ? "Stearsa" : "Activa")}";
     }
 }

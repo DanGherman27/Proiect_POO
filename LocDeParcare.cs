@@ -1,4 +1,4 @@
-﻿namespace Parcare_1;
+namespace Proiect_POO;
 
 public abstract class LocDeParcare
 {
@@ -14,4 +14,4 @@ public enum TipLocParcare
 {
     Standard,
     Premium
-} 
+}

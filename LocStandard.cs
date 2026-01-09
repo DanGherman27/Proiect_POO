@@ -1,4 +1,4 @@
-namespace Parcare_1;
+namespace Proiect_POO;
 
 public class LocStandard : LocDeParcare
 {

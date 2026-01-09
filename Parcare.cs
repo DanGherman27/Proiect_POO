@@ -5,7 +5,6 @@ public class Parcare
     public string AdresaParcare { get; set; }
     public List<ZonaParcare> ListZoneParcare { get; set; }
     public bool EsteStearsa { get; private set; }
-    public DateTime? DataStergere { get; private set; }
     
     public int NrZoneParcare { get; set; }
     public ReguliParcare Reguli { get; set; }
@@ -85,7 +84,6 @@ public class Parcare
     public void Sterge()
     {
         EsteStearsa = true;
-        DataStergere = DateTime.Now;
     }
 
     public override string ToString()
@@ -93,4 +91,5 @@ public class Parcare
         return $"ID: {IdParcare}, Adresa: {AdresaParcare}, " +
                $"Status: {(EsteStearsa ? "Stearsa" : "Activa")}";
     }
+
 }

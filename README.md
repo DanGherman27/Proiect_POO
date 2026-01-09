@@ -83,7 +83,7 @@ Please add a license file. A permissive option is the MIT license:
 ```
 MIT License
 
-Copyright (c) 2026 <Your Name>
+Copyright (c) 2026 <Gherman Dan>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy...
 ```

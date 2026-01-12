@@ -116,7 +116,6 @@ void AlegereParcare(out Parcare parcareGasita, out ZonaParcare zonaGasita)
 
 void MeniuAdmin()
 {
-    int incercari_parola = 3;
             Admin a1;
             
             Console.WriteLine("Pentru a intra pe contul de admin trebuie sa bagati parola!\n" +
@@ -307,8 +306,7 @@ void DefinireaTipurilorDeAbonamente()
 void GestionareaAbonamentelorActive()
 {
     Console.WriteLine("(1)\tVizualizare abonamente\n" +
-                      "(2)\tVizualizare istoric parcari\n" +
-                      "(3)\tAjustare abonament\n");
+                      "(2)\tVizualizare istoric parcari\n");
                             
     Console.Write("Optiunea aleasa este: ");
     int opt_admin3 = Optiuni.Citeste();
@@ -321,13 +319,6 @@ void GestionareaAbonamentelorActive()
         case 2:
             ParcareManager parcareManager = new ParcareManager();
             parcareManager.AfiseazaIstoric();
-            break;
-                                
-        case 3:
-
-
-
-
             break;
         
         default:
@@ -370,9 +361,8 @@ void MeniuClient()
                 Console.WriteLine("(1)\tCăutarea ofertelor de abonament\n" +
                                   "(2)\tVizualizarea detaliilor unui abonament\n" +
                                   "(3)\tCumpărarea unui abonament\n" +
-                                  "(4)\tGestionarea abonamentelor personale\n" +
-                                  "(5)\tIstoric abonamente\n" +
-                                  "(6)\tIesire\n" );
+                                  "(4)\tIstoric abonamente\n" +
+                                  "(5)\tIesire\n" );
             
                 Console.WriteLine("Optiunea dvs: ");
                 obt_client = Optiuni.Citeste();
@@ -392,18 +382,11 @@ void MeniuClient()
                         break;
                     
                     case 4:
-                        GestionareaAbonamentelorPersonale(c1);
-                        break;
-                    
-                    case 5:
                         managerAbonamente.AfiseazaAbonamente();
                         break;
                     
-                    case 6:
-                        if (obt_client == 6)
-                        {
+                    case 5:
                             runningClient = false;
-                        }
                         break;
                     
                     default:
@@ -448,29 +431,4 @@ void CumparareaUnuiAbonament(Client c)
     Console.Write("Introdu ID abonament: ");
     int id = Optiuni.Citeste();
     managerAbonamente.CumparaAbonament(c, id);
-}
-void GestionareaAbonamentelorPersonale(Client c)
-{
-    Console.WriteLine("(1)\tVizualizare abonamente\n" +
-                      "(2)\tInnoire abonament\n" +
-                      "(3)\tAnulare abonament\n");
-    Console.Write("Optiunea dvs. este: ");
-    int obt_client4 = Optiuni.Citeste();
-
-    switch (obt_client4)
-    {
-        case 1:
-            managerAbonamente.AfiseazaAbonamente();
-            break;
-                            
-        case 2:
-            break;
-                            
-        case 3:
-            break;
-                            
-        default:
-            Console.WriteLine("Optiunea aleasa nu exista!");
-            break;
-    }
 }

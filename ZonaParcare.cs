@@ -14,9 +14,7 @@ public class ZonaParcare
         ListLocDeParcare = new List<LocDeParcare>();
     }
     
-    public static void ModificareCapacitateZona(
-        ZonaParcare zona,
-        int capacitateNoua)
+    public static void ModificareCapacitateZona(ZonaParcare zona, int capacitateNoua)
     {
         if (capacitateNoua < zona.ListLocDeParcare.Count)
         {
@@ -29,15 +27,14 @@ public class ZonaParcare
         Console.WriteLine("Capacitatea zonei a fost modificata!");
     }
     
-    public static void ModificareReguliParcare(
-        Parcare parcare,
-        int maximDurataAbonamenteNou)
+    public static void ModificareReguliParcare(Parcare parcare,int capacitate)
     {
-        parcare.Reguli = new ReguliParcare(maximDurataAbonamenteNou);
+        parcare.Reguli = new ReguliParcare(capacitate);
         Console.WriteLine("Regulile parcarii au fost modificate!");
     }
 }
 public record ReguliParcare
 (
     int Capacitate
+
 );

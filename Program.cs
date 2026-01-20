@@ -124,12 +124,12 @@ void MeniuAdmin()
 
             if (a1.MatchPassword())
             {
+                Console.WriteLine("Parola corecta!\n");
                 while (runningAdmin)
                 {
 
 
                     int obt_admin;
-                    Console.WriteLine("Parola corecta!\n");
                     Console.WriteLine("Ce optiune doriti sa alegeti:\n" +
                                       "(1)\tAdministrarea parcarilor si zonelor\n" +
                                       "(2)\tDefinirea tipurilor de abonamente\n" +

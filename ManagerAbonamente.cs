@@ -3,16 +3,12 @@
 public class ManagerAbonamente
 {
     private List<Abonament> abonamente = new();
-
-    // ================= ADMIN =================
     
     public void AdaugaAbonament(Abonament abonament)
     {
         abonamente.Add(abonament);
         Console.WriteLine("Abonamentul a fost creat!");
     }
-
-    // ================= CLIENT =================
     
     public void AfiseazaAbonamente()
     {

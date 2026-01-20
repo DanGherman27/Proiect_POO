@@ -39,8 +39,7 @@ public class Parcare
     
     public void ModificareTipLocParcare(ZonaParcare zona, int idLoc, TipLocParcare tipNou)
     {
-        var loc = zona.ListLocDeParcare
-            .FirstOrDefault(l => l.IdLocDeParcare == idLoc);
+        var loc = zona.ListLocDeParcare.FirstOrDefault(l => l.IdLocDeParcare == idLoc);
 
         if (loc == null)
         {
@@ -70,8 +69,7 @@ public class Parcare
     
     public void StergereLocParcare(ZonaParcare zona, int idLoc)
     {
-        var loc = zona.ListLocDeParcare
-            .FirstOrDefault(l => l.IdLocDeParcare == idLoc);
+        var loc = zona.ListLocDeParcare.FirstOrDefault(l => l.IdLocDeParcare == idLoc);
 
         if (loc == null)
         {

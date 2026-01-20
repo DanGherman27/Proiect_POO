@@ -1,4 +1,4 @@
-﻿﻿using Proiect_POO;
+﻿using Proiect_POO;
 /*
  * Gherman Dan
  * Galati David
@@ -252,7 +252,6 @@ void MeniuAdmin()
 
                     parcare.Sterge();
                     Console.WriteLine("Parcarea a fost marcata ca stearsa.");
-                    // Daca exista functionalitate de a muta in istoric, se poate folosi parcareManager aici.
                 }
                     break;
 
@@ -321,7 +320,8 @@ void MeniuClient()
             case 2:
                 {
                     AlegereParcare(out var p, out var z);
-                    if (p == null || z == null) break;
+                    if (p == null || z == null) 
+                        break;
                     AfiseazaLocuri(z);
                 }
                 break;
@@ -329,7 +329,8 @@ void MeniuClient()
             case 3:
                 {
                     AlegereParcare(out var p, out var z);
-                    if (p == null || z == null) break;
+                    if (p == null || z == null) 
+                        break;
 
                     Console.Write("ID loc: ");
                     int idLoc = Optiuni.Citeste();
